@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small" >3dp</dimen>
+    <dimen name="padding_medium">5dp</dimen>
+    <dimen name="padding_big">10dp</dimen>
+    <dimen name="padding_gigant">15dp</dimen>
+    <dimen name="padding_extra_huge">35dp</dimen>
+    
+    <dimen name="levels_arrow">40dp</dimen>
+    
+    <dimen name="button_medium">100dp</dimen>
+    <dimen name="touch_error">30dp</dimen>
+    
+</resources>

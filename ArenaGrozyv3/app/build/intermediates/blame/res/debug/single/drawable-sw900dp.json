@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-sw900dp\\base_stay.png",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\drawable-sw900dp\\base_stay.png"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-sw900dp\\fox_stay.png",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\drawable-sw900dp\\fox_stay.png"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-sw900dp\\fox_walk.png",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\drawable-sw900dp\\fox_walk.png"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-sw900dp\\base_walk.png",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\drawable-sw900dp\\base_walk.png"
+    }
+]

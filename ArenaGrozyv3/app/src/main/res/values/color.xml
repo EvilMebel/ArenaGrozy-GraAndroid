@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="gray">#888888</color>
+    <color name="pause_background">#BB222222</color>
+    
+    <color name="highlight_color_filter">#A5FF0000</color>
+    <color name="hero2button">#a50000FF</color>
+    <color name="hero3button">#a500FF00</color>
+    
+    <color name="background">#50300a</color>
+    <color name="background_second">#755323</color>
+    
+    <color name="text_color_buttons">#FFFFFF</color>
+    <color name="button_background">#755323</color>
+    <color name="button_background_unfoc">#50300a</color>
+    <color name="button_outline">#ffffff</color>
+    
+    <!-- dialog -->
+    <color name="dialog_background">#755323</color>
+    
+    
+    <!-- stars -->
+    <color name="star_active">#ffea59</color>
+    <color name="star_unactive">#2b1d0c</color>
+    
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LEVEL>
+	<BACKGROUND id="2"></BACKGROUND>
+
+
+    <SECTION>
+        <TEXT id="2" color="#FFFFFF"/>
+        <HINT id="3"/>
+        <ENEMY id="86" level="0"/>
+        <ENEMY id="86" level="0"/>
+    </SECTION>
+    
+    <SECTION>
+        <ENEMY id="86" level="0"/>
+        <ENEMY id="80" level="0"/>
+    </SECTION>
+    
+	<SECTION>
+	    <HINT id="4" />
+	    <TEXT id="3" color="#FFFFFF"/>
+        <ENEMY id="84" level="0"/>
+    </SECTION>
+    
+	<SECTION>
+        <ENEMY id="84" level="0"/>
+    </SECTION>
+    
+	<SECTION>
+        <ENEMY id="86" level="0"/>
+        <ENEMY id="84" level="0"/>
+    </SECTION>
+    
+	<SECTION>
+        <ENEMY id="86" level="0"/>
+        <ENEMY id="81" level="0"/>
+    </SECTION>
+	
+ </LEVEL>

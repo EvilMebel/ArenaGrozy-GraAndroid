@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Plains of Terror</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- MENU -->
+    <string name="menu_levels">Levels</string>
+    <string name="menu_stats">Statistics</string>
+    <string name="menu_music_on">Music: On</string>
+    <string name="menu_music_off">Music: Off</string>
+    <string name="menu_sound_on">Sound: On</string>
+    <string name="menu_sound_off">Sound: Off</string>
+    
+    <string name="menu_exit">Do you really wanna quit? D:</string>
+    <string name="menu_exit_no">OMG NOO!</string>
+    <string name="menu_exit_yes">Yeah</string>
+
+    <!-- STATS -->
+    <!-- HERO1 -->
+
+    <string name="h1_life">Durability</string>
+    <string name="h1_strenght">Strength</string>
+    <string name="h1_defense">Defense</string>
+    <string name="h1_skill1">Charge</string>
+    <string name="h1_skill2">Anger</string>
+    <string name="h1_skill3">ROAR!</string>
+
+    <!-- HERO2 -->
+    <string name="h2_life">Durability</string>
+    <string name="h2_strenght">Strength</string>
+    <string name="h2_defense">Defense</string>
+    <string name="h2_skill1">Fire ball</string>
+    <string name="h2_skill2">Black hole</string>
+    <string name="h2_skill3">Pitapat</string>
+
+    <!-- HERO3 -->
+    <string name="h3_life">Durability</string>
+    <string name="h3_strenght">Strength</string>
+    <string name="h3_defense">Defense</string>
+    <string name="h3_skill1">Instant cure</string>
+    <string name="h3_skill2">Stay away!</string>
+    <string name="h3_skill3">Massive heal</string>
+
+    <!-- STATS HELP -->
+    <string name="help_life">The higher the level is, the life of your hero increases!</string>
+    <string name="help_strenght"> Higher level provides more demage made by a character using standard attack and special attack. That rule includes healing skills too.</string>
+    <string name="help_defense">This skill will make your character rally tough! Enemies will have more troubles with hurting your character. </string>
+    <string name="help_h1_skill1">Run into your enemy and shock them! Higher levels fastens regeneration of the attack, lenghten the time of the shock, speed of the run and of course demage. </string>
+    <string name="help_h1_skill2">Hero attacks all enemies at once in reach. Higher levels fastens the regeneration of the attack, speed of attack and increase the demage. </string>
+    <string name="help_h1_skill3">Dangerous roar, which stuns all the enemies. Higher levels lenghten the effect and fastens loading and performing of the attack. </string>
+    <string name="help_h2_skill1">Strong attack causes high demages to one enemy. Higher levels increase demage, fastens regeneration of the spell.</string>
+    <string name="help_h2_skill2">Black orb, which hurts enemies in reach of the explosion. Higher levels increase the area and level of demages, fastens the regeneration of the spell.</string>
+    <string name="help_h2_skill3">Global attack hurts all of the enemies! Higher levels increase demages and fastens the time of regeneration and casting the spell.</string>
+    <string name="help_h3_skill1">Heals all of companions in reach of the spell with bigger strength. It\'s worth to take care of yourself! Higher levels increase gaining life points, also the reange, regeneration and speed of casting a spell.</string>
+    <string name="help_h3_skill2">Troubles with coming horde? This spell will shock them for some time. Higher levels increase the range of the spell, fastens its regeneration and its casting.</string>
+    <string name="help_h3_skill3">Massive heal. There\'s no need to coming over! Higher levels increase the number of restored health points and fastens regeneration time and fastens the spell casting.</string>
+
+    <!-- STATS UI -->
+    <string name="stats_exp">Points: </string>
+    <string name="stats_cost">Cost: </string>
+    <string name="stats_max_level">Max level</string>
+
+    <!-- GAME -->
+    <string name="game_miss">Missed!</string>
+    <string name="game_hero_died">Hero died!</string>
+    <string name="game_win">You\'ve won!</string>
+    <string name="game_lose">You\'ve lost!</string>
+    <string name="game_exp1">+</string>
+    <string name="game_exp2"> PD</string>
+
+    <!-- GAME DIALOGS -->
+    <string name="game_dial_win">You\'ve won! What you gonna do?</string>
+    <string name="game_dial_win_next">Next level</string>
+    <string name="game_dial_levels">Level list</string>
+    <string name="game_dial_reset">Once more!</string>
+    <string name="game_dial_got_it">OK</string>
+    <string name="game_dial_got_it2">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah </string>
+    <string name="game_dial_lose">You\'ve lost. What you gonna do?</string>
+    <string name="game_dial_exit">Do you really wanna quit? Youre progress will be lost!</string>
+    <!-- options - levels, restart -->
+
+
+    <!-- TextDB TEXT resources -->
+    <string name="tdb_error">Bad text id!</string>
+    <string name="tdb_1first">Get ready!</string>
+    <string name="tdb_2bomb">Stunning!</string>
+    <string name="tdb_3wizard">WIZARD</string>
+    <string name="tdb_4tank">Mommy?</string>
+    <string name="tdb_5healer">HEALER</string>
+    <string name="tdb_6violence">VIOLENCE!</string>
+    <string name="tdb_7">I\'M STRONG! >:D</string>
+    <string name="tdb_8">Does it hurt?</string>
+    <string name="tdb_9">HAHA!</string>
+    <string name="tdb_10">RIOT!</string>
+    <string name="tdb_11">MOOOOAAAR!</string>
+    <string name="tdb_12">Lame...</string>
+    <string name="tdb_13">I\'M STRONG! >:D</string>
+    <string name="tdb_14">I\'M STRONG! >:D</string>
+    <string name="tdb_15">I\'M STRONG! >:D</string>
+    <string name="tdb_16">I\'M STRONG! >:D</string>
+    <string name="tdb_17">I\'M STRONG! >:D</string>
+    <string name="tdb_18">I\'M STRONG! >:D</string>
+    <string name="tdb_19">I\'M STRONG! >:D</string>
+    <string name="tdb_20">I\'M STRONG! >:D</string>
+
+    <!-- TextDB HINT resources -->
+
+    <string name="hdb_1">Welcome to the Test Area!\r\nIn the top left corner you can choose between characters. 
+Next, choose your enemy, which you wanna attack, or place for your character. 
+If you\'re controlling the green hero, you can heal your team by choosing your companion as a target! </string>
+    <string name="hdb_2">Great!\r\nRemember, that there are different enemies attacking in their own way. Here they are!</string>
+    <string name="hdb_3">After first fight?\r\nIf you have enough skill points you can buy new skills in screen: \"Hero statistics\"!</string>
+    <string name="hdb_4">Bomber! Destroy him, befor he blows up!</string>
+    <string name="hdb_5">Small enemies are weak, but really annoying! It\'s worth to invest skill points into special attacks with bigger range to destroy more enemies at once!</string>
+    <string name="hdb_6">Remember, that developing basic statistics is also important! Enemies in other levels are stronger. You\'ll get more skill points for destroying them!</string>
+    <string name="hdb_7">As you\'re here, youp probably understood controls of the game. Use your skills here!</string>
+    <string name="hdb_8">Your healer can\'t heal himself with basic skill. Buy a special ability, if you haven\'t already.</string>
+    <string name="hdb_9">Bomber! Destroy him, befor he blows up!</string>
+    <string name="hdb_10">Bomber! Destroy him, befor he blows up!</string>
+    <string name="hdb_11">Bomber! Destroy him, befor he blows up!</string>
+    <string name="hdb_12">Bomber! Destroy him, befor he blows up!</string>
+    <string name="hdb_13">Bomber! Destroy him, befor he blows up!</string>
+    <string name="hdb_14">Bomber! Destroy him, befor he blows up!</string>
+
+</resources>

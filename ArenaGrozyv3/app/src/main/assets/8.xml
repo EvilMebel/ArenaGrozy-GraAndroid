@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LEVEL>
+	<BACKGROUND id="1"></BACKGROUND>
+
+	<!-- prezentacja postaci -->
+	<SECTION>
+	 	<ENEMY id="80" level="3"></ENEMY>
+	</SECTION>
+	
+	<SECTION>
+	 	<ENEMY id="81" level="3"></ENEMY>
+	</SECTION>
+	
+	<SECTION>
+	 	<ENEMY id="82" level="3"></ENEMY>
+	</SECTION>
+	
+	<SECTION>
+	 	<ENEMY id="83" level="3"></ENEMY>
+	</SECTION>
+	
+	<SECTION>
+	 	<ENEMY id="84" level="3"></ENEMY>
+	</SECTION>
+	
+	<SECTION>
+	 	<ENEMY id="85" level="3"></ENEMY>
+	</SECTION>
+	
+	<SECTION>
+	 	<ENEMY id="86" level="3"></ENEMY>
+	</SECTION>
+	
+	
+	<SECTION>
+	 	<ENEMY id="86" level="3"></ENEMY>
+	 	<ENEMY id="86" level="3"></ENEMY>
+	 	<ENEMY id="80" level="3"></ENEMY>
+	 	<ENEMY id="80" level="3"></ENEMY>
+	 	<ENEMY id="80" level="3"></ENEMY>
+	 	<ENEMY id="80" level="3"></ENEMY>
+	 	<ENEMY id="81" level="3"></ENEMY>
+	 	<ENEMY id="83" level="3"></ENEMY>
+	 	<ENEMY id="82" level="3"></ENEMY>
+	 	<ENEMY id="82" level="3"></ENEMY>
+	</SECTION>
+	
+ </LEVEL>
