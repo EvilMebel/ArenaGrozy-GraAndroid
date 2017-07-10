@@ -8,7 +8,6 @@ import android.graphics.Canvas;
  * @author Evil
  */
 public interface RunnableInerface {
-    
     /**
      * calculate actions and moves
      *
