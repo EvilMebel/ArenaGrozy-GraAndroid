@@ -73,7 +73,7 @@ public abstract class Sprite extends GameMovObj {
     private LifeBar lifeBar;
 
     // targetting, healing
-    private Pointer pointer;
+    private Pivot pivot;
     protected Sprite target;
 
     protected int status;
@@ -270,8 +270,8 @@ public abstract class Sprite extends GameMovObj {
                         dest_y = y;
                         dt -= mdt;
                         speed = speedX = speedY = 0;
-                        if (pointer != null && target == null)
-                            pointer.hide();
+                        if (pivot != null && target == null)
+                            pivot.hide();
                         status = STATUS_STAY;
                         if (target != null) {
                             setTarget(target);//refresh target ascions
@@ -431,9 +431,9 @@ public abstract class Sprite extends GameMovObj {
             setHp(hp - dmg);
             if (hp < 1) {
                 setHp(0);
-                if (pointer != null) {
-                    pointer.hide();
-                    pointer = null;
+                if (pivot != null) {
+                    pivot.hide();
+                    pivot = null;
                 }
                 GameView.game.get().spriteIsDead(this);
             }
@@ -529,15 +529,15 @@ public abstract class Sprite extends GameMovObj {
         status = STATUS_WALK;
         if (!follow_target) {
             target = null; // cancel following
-            if (pointer != null)
-                pointer.setTarget(null);
+            if (pivot != null)
+                pivot.setTarget(null);
         }
 
         changeDestination(dest_x, dest_y, aspeed);
 
-        if (pointer != null) {
-            pointer.setPosition(this.dest_x, this.dest_y);
-            pointer.show();
+        if (pivot != null) {
+            pivot.setPosition(this.dest_x, this.dest_y);
+            pivot.show();
         }
 
         refreshAnimDir();
@@ -553,9 +553,9 @@ public abstract class Sprite extends GameMovObj {
         if (s != null) {
             target = s;
 
-            if (pointer != null) {
-                pointer.show();
-                pointer.setTarget(target);
+            if (pivot != null) {
+                pivot.show();
+                pivot.setTarget(target);
             }
             changeDestination((int) (s.x), (int) s.y, speed, true);
         } else if (Toolbox.TEST_MODE)
@@ -600,8 +600,8 @@ public abstract class Sprite extends GameMovObj {
         if (current_task != null && current_task.isNeed_target() && target != null) {
             current_task.setTarget(target);
         } else if (current_task != null && !current_task.isNeed_target()) {
-            if (pointer != null)
-                pointer.hide();
+            if (pivot != null)
+                pivot.hide();
         }
 
     }
@@ -667,12 +667,12 @@ public abstract class Sprite extends GameMovObj {
         this.scale = scale;
     }
 
-    public Pointer getPointer() {
-        return pointer;
+    public Pivot getPivot() {
+        return pivot;
     }
 
-    public void setPointer(Pointer pointer) {
-        this.pointer = pointer;
+    public void setPivot(Pivot pivot) {
+        this.pivot = pivot;
     }
 
     public Sprite getTarget() {
@@ -692,20 +692,20 @@ public abstract class Sprite extends GameMovObj {
 
         if (!isNewPointNeeded()) {
             this.target = target;
-            if (pointer != null)
-                pointer.setTarget(target);
+            if (pivot != null)
+                pivot.setTarget(target);
         }
 
         if (this.target != null) {
             lookAtTarget(target);
-            if (pointer != null)
-                pointer.show();
+            if (pivot != null)
+                pivot.show();
 
             takeNextTask();//if have any in current or todo list
         } else {
             cancelCurrentTask();
-            if (pointer != null)
-                pointer.hide();
+            if (pivot != null)
+                pivot.hide();
         }
     }
 
@@ -863,8 +863,8 @@ public abstract class Sprite extends GameMovObj {
     public void spriteIsDead(Sprite sprite) {
         if (target == sprite) {
             target = null;
-            if (pointer != null)
-                pointer.hide();
+            if (pivot != null)
+                pivot.hide();
         }
     }
 
@@ -902,8 +902,8 @@ public abstract class Sprite extends GameMovObj {
         walkL = null;
         Toolbox.freeMemory(bmpIdWalk, true);
         walkR = null;
-        if (pointer != null)
-            pointer.freeMemory();
+        if (pivot != null)
+            pivot.freeMemory();
 
     }
 

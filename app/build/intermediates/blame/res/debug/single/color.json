@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text_holo.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\color\\abc_search_url_text_holo.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },

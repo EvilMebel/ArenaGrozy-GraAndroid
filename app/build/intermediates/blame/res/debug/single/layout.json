@@ -4,12 +4,16 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_template_part_time.xml"
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\levels_activity.xml",
@@ -24,6 +28,10 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_mode_close_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
@@ -32,12 +40,20 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_template_custom_big.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_action.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_overlay.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_decor_overlay.xml"
     },
     {
-        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_action.xml"
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_overlay.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_decor_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\stats_activity.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\stats_activity.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor.xml",
@@ -48,12 +64,28 @@
         "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\layout\\exit_dialog.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hint_dialog.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\hint_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
@@ -76,12 +108,24 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\exit_dialog.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\exit_dialog.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu_activity.xml",
         "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\layout\\menu_activity.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragmet_levels.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\fragmet_levels.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\loading_activity.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\loading_activity.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragmet_levels.xml",
@@ -92,11 +136,31 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_include.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_decor_include.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\level_item.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\level_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_home.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_screen.xml"
     },
     {
@@ -108,12 +172,20 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tab.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_tab.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tab.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_tab.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_activity_chooser_view_include.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -132,6 +204,10 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_decor_include.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\stats_item.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\stats_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
@@ -140,8 +216,16 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\stats_item.xml",
         "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\layout\\stats_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
@@ -176,8 +260,24 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tabbar.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_tabbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu_activity.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\menu_activity.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -192,6 +292,14 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\notification_template_media_custom.xml"
     },
@@ -200,8 +308,28 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\levels_activity.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\levels_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\win_dialog.xml",
         "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\layout\\win_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lose_dialog.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\lose_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
@@ -218,6 +346,10 @@
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
@@ -238,5 +370,9 @@
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hint_dialog.xml",
         "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\layout\\hint_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\win_dialog.xml",
+        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\layout\\win_dialog.xml"
     }
 ]

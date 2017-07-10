@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_slide_out_top.xml"
     },
@@ -24,8 +28,20 @@
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\94511c00f10fc83cdbed0f3f508416988e7f8090\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
@@ -34,6 +50,14 @@
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
         "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Evil\\.android\\build-cache\\899474b613e002185a712fc4c8ae317980983d4e\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
