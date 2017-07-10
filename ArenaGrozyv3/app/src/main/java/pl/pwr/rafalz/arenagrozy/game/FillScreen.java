@@ -41,6 +41,7 @@ public class FillScreen extends GameObject {
             c.drawColor(paint.getColor());
         }
     }
+    
 
     public void setColor(int color) {
         paint.setColor(color);
