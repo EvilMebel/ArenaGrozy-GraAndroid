@@ -33,7 +33,6 @@ public class Missle extends GameMovObj {
 
     private boolean wentToDest;
 
-
     private GameObject target;
 
     //GRAPHICS
@@ -53,7 +52,6 @@ public class Missle extends GameMovObj {
 
         changeDestination(target.getX(), target.getY(), (float) distance(target) / 0.5f);
     }
-
 
     @Override
     public void update(float dt) {

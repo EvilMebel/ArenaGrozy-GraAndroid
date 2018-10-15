@@ -30,17 +30,18 @@ import android.util.Log;
  */
 public abstract class Sprite extends GameMovObj {
     private final String tag = getClass().getName();
-    protected static final boolean DEBUG_MODE = false;
+    static final boolean DEBUG_MODE = false;
 
     /*
      * STATIC INFO
      */
-    public final static int STATUS_WALK = 0;
-    public final static int STATUS_STAY = 1;
-    public final static int STATUS_DEAD = 2;
-    public final static int STATUS_TASK = 3;//update hit action
-    public final static int STATUS_STUN = 4;
+    private final static int STATUS_WALK = 0;
+    private final static int STATUS_STAY = 1;
+    private final static int STATUS_DEAD = 2;
+    private final static int STATUS_TASK = 3;//update hit action
+    private final static int STATUS_STUN = 4;
 
+    private static final float CORR_HEI = 0.90f;
 
     // types of spell range
     public final static int RANGE_FAR = 0;//hit target from distance
@@ -50,26 +51,23 @@ public abstract class Sprite extends GameMovObj {
 
 
     //animations
-    protected Bitmap[] walkL;
-    protected Bitmap[] walkR;
-    protected int bmpIdWalk;
+    private Bitmap[] walkL;
+    private Bitmap[] walkR;
+    private int bmpIdWalk;
 
-    protected int walkFrames;
-    protected Bitmap[] stayL;
-    protected Bitmap[] stayR;
-    protected int bmpIdStay;
+    private Bitmap[] stayL;
+    private Bitmap[] stayR;
+    private int bmpIdStay;
 
-    protected int stayFrames;
     protected Paint paint;
     private float frame;
 
     //height where are feets of character
-    private float corrHei = 0.90f;
     private boolean lookLeft;
     private float scale;
 
     private RectF shadow;
-    protected Paint shadowPaint;
+    private Paint shadowPaint;
     private int shadowR;
     protected int r;
 
@@ -119,14 +117,13 @@ public abstract class Sprite extends GameMovObj {
     private float stunTime;
     private float currStunTime;
 
-
     private Rect dstBmp;
 
-    public Sprite(int IDwalk, int walkFrames, int IDstay, int stayFrames,
+    public Sprite(int iDwalk, int walkFrames, int IDstay, int stayFrames,
                   float scale) {
         super();
         this.scale = scale;
-        bmpIdWalk = IDwalk;
+        bmpIdWalk = iDwalk;
         bmpIdStay = IDstay;
         paint = new Paint();
         shadowPaint = new Paint();
@@ -139,8 +136,8 @@ public abstract class Sprite extends GameMovObj {
 
         standardSpeed = Toolbox.screenHeight / 6;//def value
 
-        walkL = Toolbox.getFramesFromBitmap(IDwalk, walkFrames);
-        walkR = Toolbox.getMirroredFrames(IDwalk);
+        walkL = Toolbox.getFramesFromBitmap(iDwalk, walkFrames);
+        walkR = Toolbox.getMirroredFrames(iDwalk);
         stayL = Toolbox.getFramesFromBitmap(IDstay, stayFrames);
         stayR = Toolbox.getMirroredFrames(IDstay);
 
@@ -193,7 +190,7 @@ public abstract class Sprite extends GameMovObj {
 
             //character
             int xbmp = (int) (x - width / 2);
-            int ybmp = (int) ((int) (y - height * corrHei));
+            int ybmp = (int) ((int) (y - height * CORR_HEI));
             dstBmp.set(xbmp, ybmp, xbmp + width, ybmp + height);
 
             if (bmp != null)
@@ -307,9 +304,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * update behaviour on STAY status
-     *
-     * @param adt
-     * @return
      */
     private float updateStay(float adt) {
         float dt = adt;
@@ -454,23 +448,18 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * cancels current task and changes status to STUN - shock
-     *
-     * @param stunT
      */
-    protected void stun(float stunT) {
-        if (hp > 0 && stunT > 0) {
+    protected void stun(float stunTime) {
+        if (hp > 0 && stunTime > 0) {
             Log.d(tag, "START of stun");
             cancelCurrentTask();
-            stunTime = stunT;
+            this.stunTime = stunTime;
             status = STATUS_STUN;
         }
     }
 
     /**
      * heal this sprite
-     *
-     * @param healer
-     * @return
      */
     public float heal(Task healer) {
         Sprite s = healer.getParent();
@@ -505,8 +494,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * hit - hitter , me - this, t - task power
-     *
-     * @param h
      */
     public void printStats(Task h) {
         if (Toolbox.TEST_MODE) {
@@ -521,11 +508,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * set a point where object should go. Id follow_target is false, Sprite will reject current target
-     *
-     * @param dest_x
-     * @param dest_y
-     * @param aspeed
-     * @param follow_target
      */
     public void changeDestination(float dest_x, float dest_y, float aspeed,
                                   boolean follow_target) {
@@ -549,9 +531,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * go to Sprite with specified speed
-     *
-     * @param s
-     * @param speed
      */
     public void changeDestination(Sprite s, float speed) {
         if (s != null) {
@@ -575,21 +554,16 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * can i reach target to hit him from close distance?
-     *
-     * @return
      */
-    protected boolean targetInRange() {
+    protected boolean isTargetInRange() {
         if (target != null) {
-            if (distance(target) <= r + target.r)
-                return true;
+            return distance(target) <= r + target.r;
         }
         return false;
     }
 
     /**
      * use special attack - for hero
-     *
-     * @param t
      */
     public void useSpell(Task t) {
         status = STATUS_TASK;
@@ -597,7 +571,7 @@ public abstract class Sprite extends GameMovObj {
 
         if (current_task != null && (current_task == task_hit || current_task == task_heal)) {
             current_task.cancelTask();//cancel standard task and take a better one
-            //player dont want to wait forever
+            //player don't want to wait forever
             current_task = null;
         }
 
@@ -649,15 +623,11 @@ public abstract class Sprite extends GameMovObj {
     }
 
     public boolean canMove() {
-        if (status != STATUS_DEAD && status != STATUS_TASK && status != STATUS_STUN)// && jump_type==0)
-            return true;
-        return false;
+        return status != STATUS_DEAD && status != STATUS_TASK && status != STATUS_STUN;
     }
 
     /**
      * get hp in procent
-     *
-     * @return
      */
     public float getHpProc() {
         return hp / hpStart;
@@ -760,8 +730,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * if i don't have current task and have empty list of task i can take a new one!
-     *
-     * @return
      */
     private boolean canTakeDefaultTask() {
         return (current_task == null && tasks.size() == 0);
@@ -769,8 +737,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * sets a color filter on character
-     *
-     * @param color
      */
     public void setPaintFilter(int color) {
         LightingColorFilter darkFilter = new LightingColorFilter(color, 0);
@@ -779,8 +745,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * range of sprite
-     *
-     * @return
      */
     public int getR() {
         return r;
@@ -792,8 +756,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * get animation direction
-     *
-     * @return
      */
     public boolean isLookLeft() {
         return lookLeft;
@@ -801,8 +763,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * set animation direction
-     *
-     * @param lookLeft
      */
     public void setLookLeft(boolean lookLeft) {
         this.lookLeft = lookLeft;
@@ -838,8 +798,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * standard speed will be like proc*constV
-     *
-     * @param proc
      */
     public void setStandardSpeed(float proc) {
         standardSpeed = Toolbox.screenHeight / 6;
@@ -861,8 +819,6 @@ public abstract class Sprite extends GameMovObj {
 
     /**
      * IMPORTANT! REMOVE ALL REFERENCES FOR DELETED OBJECT!
-     *
-     * @param sprite
      */
     public void spriteIsDead(Sprite sprite) {
         if (target == sprite) {
