@@ -164,8 +164,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         playMusic = DataBase.getOptMusic();
         playSounds = DataBase.getOptSound();
 
-        if (touchError < Toolbox.gettouchErrorMax())
-            touchError = Toolbox.gettouchErrorMax();
+        if (touchError < Toolbox.getTouchErrorMax())
+            touchError = Toolbox.getTouchErrorMax();
 
         if (buttonSize > Toolbox.screenWidth / 8)
             buttonSize = Toolbox.screenWidth / 8;

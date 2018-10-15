@@ -119,12 +119,12 @@ public abstract class Sprite extends GameMovObj {
 
     private Rect dstBmp;
 
-    public Sprite(int iDwalk, int walkFrames, int IDstay, int stayFrames,
+    public Sprite(int idWalk, int walkFrames, int idStay, int stayFrames,
                   float scale) {
         super();
         this.scale = scale;
-        bmpIdWalk = iDwalk;
-        bmpIdStay = IDstay;
+        bmpIdWalk = idWalk;
+        bmpIdStay = idStay;
         paint = new Paint();
         shadowPaint = new Paint();
         shadowPaint.setColor(Color.BLACK);
@@ -136,10 +136,10 @@ public abstract class Sprite extends GameMovObj {
 
         standardSpeed = Toolbox.screenHeight / 6;//def value
 
-        walkL = Toolbox.getFramesFromBitmap(iDwalk, walkFrames);
-        walkR = Toolbox.getMirroredFrames(iDwalk);
-        stayL = Toolbox.getFramesFromBitmap(IDstay, stayFrames);
-        stayR = Toolbox.getMirroredFrames(IDstay);
+        walkL = Toolbox.getFramesFromBitmap(idWalk, walkFrames);
+        walkR = Toolbox.getMirroredFrames(idWalk);
+        stayL = Toolbox.getFramesFromBitmap(idStay, stayFrames);
+        stayR = Toolbox.getMirroredFrames(idStay);
 
         width = (int) (scale * Toolbox.spriteWidth);
         height = (int) (scale * Toolbox.spriteHeight);
