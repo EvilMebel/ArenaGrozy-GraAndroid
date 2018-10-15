@@ -2,15 +2,13 @@ package pl.pwr.rafalz.arenagrozy.game;
 
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 
-import android.graphics.Canvas;
-
 /**
  * base class for all objects in game. When you extend this class remember to
  * override functions from interface.
  *
  * @author Evil
  */
-public abstract class GameObject implements RunnableInerface {
+public abstract class GameObject implements RunnableInterface {
     protected float x;
     protected float y;
     protected int width;

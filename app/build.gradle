@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 15
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "pl.pwr.rafalz.arenagrozy"
-        minSdkVersion 14
-        targetSdkVersion 17
+        minSdkVersion 9
+        targetSdkVersion 18
     }
 
     buildTypes {
@@ -21,7 +21,7 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:18.0.0'
     compile 'com.android.support:appcompat-v7:18.0.0'
-    compile project(":engine")
+
 
     //testy Unit
     // Required -- JUnit 4 framework

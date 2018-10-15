@@ -1,15 +1,14 @@
 package pl.pwr.rafalz.arenagrozy.data;
 
 import android.graphics.Color;
-import android.os.PowerManager;
 import android.util.Log;
-import android.widget.HeterogeneousExpandableList;
+
 import pl.pwr.rafalz.arenagrozy.R;
-import pl.pwr.rafalz.arenagrozy.game.Sprite;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
 import pl.pwr.rafalz.arenagrozy.game.Task;
 
 public class TaskDB {
-	static final String tag = "TaskDB";
+	static final String TAG = "TaskDB";
 
 	public static final int STANDARD_H1 = 0;
 	public static final int STANDARD_H2 = 1;
@@ -109,7 +108,7 @@ public class TaskDB {
 		Task t = null;
 		int color;
 
-		Log.d(tag, "TB NEW TASK id " + taskId);
+		Log.d(TAG, "TB NEW TASK id " + taskId);
 		switch (taskId) {
 		/*
 		 * HEROES TASKS
@@ -457,7 +456,7 @@ public class TaskDB {
 
 		default:
 		case EnemyDB.ENEMY_WEAK:
-			Log.e(tag, "TaskId is not supported! nr:" + taskId);
+			Log.e(TAG, "TaskId is not supported! nr:" + taskId);
 			t = new Task(taskId, Sprite.RANGE_CLOSE, Task.ANIM_TWO_DIRECTIONS,
 					R.drawable.base_walk, 8, parent);
 			t.setDuration(0.7f);

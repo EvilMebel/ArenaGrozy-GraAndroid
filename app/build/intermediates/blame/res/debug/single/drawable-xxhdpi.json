@@ -1,10 +1,14 @@
 [
     {
+        "merged": "C:\\Android Apps\\ArenaGrozyv2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Android Apps\\ArenaGrozyv2\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\Evil\\Documents\\ArenaGrozy-GraAndroid\\ArenaGrozyv3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Android Apps\\ArenaGrozyv3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Android Apps\\ArenaGrozyv3\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     }
 ]

@@ -15,4 +15,6 @@ public class LevelFrame {
 		this.musicId = musicId;
 		this.backgroundId = backgroundId;
 	}
+	
+	
 }

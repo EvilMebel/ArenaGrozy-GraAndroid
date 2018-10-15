@@ -3,6 +3,12 @@ package pl.pwr.rafalz.arenagrozy.game;
 import java.util.List;
 
 import pl.pwr.rafalz.arenagrozy.R;
+import pl.pwr.rafalz.arenagrozy.game.effects.FillScreen;
+import pl.pwr.rafalz.arenagrozy.game.effects.Missle;
+import pl.pwr.rafalz.arenagrozy.game.effects.Wave;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Hero;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
+import pl.pwr.rafalz.arenagrozy.game.ui.Text;
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 import pl.pwr.rafalz.arenagrozy.view.GameView;
 
@@ -155,7 +161,6 @@ public class Task implements OnCompletionListener {
         checkFill();
         checkHit();
         checkMissle();
-
     }
 
     /**
@@ -190,7 +195,7 @@ public class Task implements OnCompletionListener {
             if (current_duration >= missleTime && !missleCompleted) {
                 missleCompleted = true;
 
-                Missle m = new Missle(parent.x, parent.y, parent.r / 2,
+                Missle m = new Missle(parent.x, parent.y, parent.getR() / 2,
                         parent.getTarget());
                 m.setColor(waveColor);
                 m.setyModifier(parent.getHeight() / 2);
@@ -239,7 +244,7 @@ public class Task implements OnCompletionListener {
             if (fillAlpha != 0)
                 f.setStartAlpha(fillAlpha);
             if (fillDA != 0)
-                f.setDeltaAplha(fillDA);
+                f.setDeltaAlpha(fillDA);
 
             f.update(current_duration - fillTime);//update if dt was greater
             GameView.game.get().addFillScreen(f);

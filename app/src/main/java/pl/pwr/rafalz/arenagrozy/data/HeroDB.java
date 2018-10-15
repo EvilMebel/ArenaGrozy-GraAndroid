@@ -5,8 +5,8 @@ import java.util.List;
 
 import pl.pwr.rafalz.arenagrozy.R;
 import pl.pwr.rafalz.arenagrozy.adapters.StatsSkillFrame;
-import pl.pwr.rafalz.arenagrozy.game.Hero;
-import pl.pwr.rafalz.arenagrozy.game.Pivot;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Hero;
+import pl.pwr.rafalz.arenagrozy.game.effects.Pointer;
 import pl.pwr.rafalz.arenagrozy.game.Task;
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 import android.content.Context;
@@ -165,69 +165,69 @@ public class HeroDB {
 		int sW = Toolbox.screenWidth/4;
 		int sH = Toolbox.screenHeight/8;
 		
-		Hero hero = null;
-		Pivot pivot = null;
+		Hero h = null;
+		Pointer p = null;
 		Task t = null;
 		int[] cLevels = DataBase.getHeroLevels(whichHero);
 		int color;
 		switch(whichHero) {
 		default:
 		case 1:
-			hero = new Hero(sW, 4*sH, R.drawable.fox_walk, 8, R.drawable.fox_stay, 8, 1f, 1);
-			pivot = new Pivot(0, 0, hero.getWidth()/3);
-			pivot.setColor(Color.RED);
-			hero.setPivot(pivot);
+			h = new Hero(sW, 4*sH, R.drawable.fox_walk, 8, R.drawable.fox_stay, 8, 1f, 1);
+			p = new Pointer(0, 0, h.getWidth()/3);
+			p.setColor(Color.RED);
+			h.setPointer(p);
 
 			//stats
-			hero.setHpStart(getLife(LIFE_HIGH, cLevels[0]));
-			hero.setStrStart(getStrength(STRENGTH_LOW, cLevels[1]));
-			hero.setDefStart(getDefense(DEFENSE_HIGH, cLevels[2]));
+			h.setHpStart(getLife(LIFE_HIGH, cLevels[0]));
+			h.setStrStart(getStrength(STRENGTH_LOW, cLevels[1]));
+			h.setDefStart(getDefense(DEFENSE_HIGH, cLevels[2]));
 			//set def hit
-			t = TaskDB.getTask(TaskDB.STANDARD_H1, hero, 0);
-			hero.setTask_hit(t);
+			t = TaskDB.getTask(TaskDB.STANDARD_H1, h, 0);
+			h.setTask_hit(t);
 			break;
 		case 2:
-			hero = new Hero(sW*2, 6*sH, R.drawable.fox_walk, 8, R.drawable.fox_stay, 8, 1f, 2);
-			pivot = new Pivot(0, 0, hero.getWidth()/3);
+			h = new Hero(sW*2, 6*sH, R.drawable.fox_walk, 8, R.drawable.fox_stay, 8, 1f, 2);
+			p = new Pointer(0, 0, h.getWidth()/3);
 			color = Color.parseColor("#0044dd");//blue
-			pivot.setColor(color);
-			hero.setPivot(pivot);
+			p.setColor(color);
+			h.setPointer(p);
 
+			h.setPaintFilter(color);
 			//stats
-			hero.setHpStart(getLife(LIFE_LOW, cLevels[0]));
-			hero.setStrStart(getStrength(STRENGTH_HIGH, cLevels[1]));
-			hero.setDefStart(getDefense(DEFENSE_LOW, cLevels[2]));
-
-			hero.setPaintFilter(color);
+			h.setHpStart(getLife(LIFE_LOW, cLevels[0]));
+			h.setStrStart(getStrength(STRENGTH_HIGH, cLevels[1]));
+			h.setDefStart(getDefense(DEFENSE_LOW, cLevels[2]));
+			
 			//set def hit
-			t = TaskDB.getTask(TaskDB.STANDARD_H2, hero, 0);
-			hero.setTask_hit(t);
+			t = TaskDB.getTask(TaskDB.STANDARD_H2, h, 0);
+			h.setTask_hit(t);
 			break;
 		case 3:
-			hero = new Hero(sW*3, 4*sH, R.drawable.fox_walk, 8, R.drawable.fox_stay, 8, 1f, 3);
-			pivot = new Pivot(0, 0, hero.getWidth()/3);
+			h = new Hero(sW*3, 4*sH, R.drawable.fox_walk, 8, R.drawable.fox_stay, 8, 1f, 3);
+			p = new Pointer(0, 0, h.getWidth()/3);
 			color = Color.parseColor("#33cc5c");//green
-			pivot.setColor(color);
-			hero.setPivot(pivot);
+			p.setColor(color);
+			h.setPointer(p);
 
-			hero.setPaintFilter(color);
-
+			h.setPaintFilter(color);
+			h.setHealer(true);//player 3 is a healer!
+			
 			//stats
-			hero.setHpStart(getLife(LIFE_MEDIUM, cLevels[0]));
-			hero.setStrStart(getStrength(STRENGTH_LOW, cLevels[1]));
-			hero.setDefStart(getDefense(DEFENSE_MEDIUM, cLevels[2]));
-
-			hero.setHealer(true);//player 3 is a healer!
+			h.setHpStart(getLife(LIFE_MEDIUM, cLevels[0]));
+			h.setStrStart(getStrength(STRENGTH_LOW, cLevels[1]));
+			h.setDefStart(getDefense(DEFENSE_MEDIUM, cLevels[2]));
+			
 			//set def hit
-			t = TaskDB.getTask(TaskDB.STANDARD_H3, hero, 0);
-			hero.setTask_hit(t);
+			t = TaskDB.getTask(TaskDB.STANDARD_H3, h, 0);
+			h.setTask_hit(t);
 			//set def heal
-			t = TaskDB.getTask(TaskDB.STANDARD_H3_HEAL, hero, 0);
-			hero.setTask_heal(t);
+			t = TaskDB.getTask(TaskDB.STANDARD_H3_HEAL, h, 0);
+			h.setTask_heal(t);
 			break;
 		}
 		
-		return hero;
+		return h;
 	}
 
 }

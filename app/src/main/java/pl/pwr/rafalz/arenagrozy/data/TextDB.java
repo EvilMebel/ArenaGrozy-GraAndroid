@@ -27,6 +27,12 @@ public class TextDB {
 	public final static int tdb_19 =19;
 	public final static int tdb_20 =20;
 
+	/*
+	public final static int FIRST_TEXT =6;
+	public final static int FIRST_TEXT =7;
+	public final static int FIRST_TEXT =8;
+	public final static int FIRST_TEXT =9;
+	*/
 	public final static int hdb_1 =1;
 	public final static int hdb_2 =2;
 	public final static int hdb_3 =3;
@@ -41,6 +47,10 @@ public class TextDB {
 	public final static int hdb_12 =12;
 	public final static int hdb_13 =13;
 	public final static int hdb_14 =14;
+	/*
+	public final static int hdb_1 =1;
+	public final static int hdb_1 =1;
+	public final static int hdb_1 =1;
 	/*
 	 * 			hints
 	 */
@@ -125,6 +135,8 @@ public class TextDB {
 		case tdb_20:
 			resId = R.string.tdb_20;
 			break;
+			
+			
 
 		default:
 			resId = R.string.tdb_error; 

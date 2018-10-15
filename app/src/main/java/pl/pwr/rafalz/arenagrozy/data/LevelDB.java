@@ -8,11 +8,11 @@ import pl.pwr.rafalz.arenagrozy.R;
  *
  */
 public class LevelDB {
-	public static final int LEVEL_TYPE_FORREST = 1;
-	public static final int LEVEL_TYPE_HOME = 2;
-	public static final int LEVEL_TYPE_RUINS = 3;
-	public static final int LEVEL_TYPE_SWAMP = 4;
-	public static final int LEVEL_TYPE_DUNGEON = 5;
+	private static final int LEVEL_TYPE_FORREST = 1;
+	private static final int LEVEL_TYPE_HOME = 2;
+	private static final int LEVEL_TYPE_RUINS = 3;
+	private static final int LEVEL_TYPE_SWAMP = 4;
+	private static final int LEVEL_TYPE_DUNGEON = 5;
 	
 	public static LevelFrame getLevelBackgroundAndMusic(int backgType) {
 		switch (backgType) {
@@ -31,8 +31,6 @@ public class LevelDB {
 			
 		case LEVEL_TYPE_DUNGEON:
 			return new LevelFrame(R.raw.music_game3_easternsands, R.drawable.background_1forest3);
-			
-
 		}
 	}
 }

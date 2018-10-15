@@ -3,12 +3,66 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Evil\Documents\ArenaGrozy-GraAndroid\engine\build\intermediates\bundles\default\classes.jar"
+        jar="C:\Users\Evil\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="4435f4141bfa512d7bb7eadfe930b665b2294910">
-        <dex dex="C:\Users\Evil\Documents\ArenaGrozy-GraAndroid\app\build\intermediates\pre-dexed\debug\classes_a91686a579dbdd296a09ecc9887f6209f3a36d21.jar" />
+        revision="23.0.3"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Android Apps\ArenaGrozyv3\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_430026b87c36857a8a515a699ce4712e4a1bdbc8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Apps\ArenaGrozyv3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="C:\Android Apps\ArenaGrozyv3\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-18.0.0_a00a9f924772df140826c1c9a55a0b2df6b968b5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-18.0.0_c12f79d749523238ea4b5d68004d0aecdfeb3a94\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4319d97e59c78bff8ea7055cd8e0e0b38d628713">
+        <dex dex="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0be0976c9e89ad47080a0e872397fe55906f8f50\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4df54c61219f72a8e871ced86ac8be95fc25a8e0">
+        <dex dex="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_86a573f033da5e7cef84bb1e1702416e5c2effb4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Evil\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Android Apps\ArenaGrozyv2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_430026b87c36857a8a515a699ce4712e4a1bdbc8\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Evil\Documents\ArenaGrozy-GraAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="C:\Users\Evil\Documents\ArenaGrozy-GraAndroid\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-18.0.0_4dd93a9c0722f43b93d87dcd16724bb32dd49742.jar" />
     </item>
 
 </items>
