@@ -95,9 +95,6 @@ public class Toolbox {
 	
 	/**
 	 * searching wanted array of bitmaps in Toolbox's bitmap database
-	 * @param bmpId
-	 * @param mirrored
-	 * @return
 	 */
 	private static int searchBmp(int bmpId, boolean mirrored) {
 		int wantexIndex = -1;//-1 is not found
@@ -113,9 +110,6 @@ public class Toolbox {
 
 	/**
 	 * prepare array of bitmaps(for animation) from specified Bitmap
-	 * @param bmp
-	 * @param frameCount
-	 * @return
 	 */
 	public static Bitmap[] getFramesFromBitmap(int bmpId, int framesCount) {
 		Bitmap[] res = null;
@@ -195,8 +189,6 @@ public class Toolbox {
 
 	/**
 	 * if Toolbox have prepared array of animation you can get mirror version. In other case will return Exception
-	 * @param bmpId
-	 * @return
 	 */
 	private static Bitmap[] getMirroredFrames(Bitmap[] walkL) {
 		Bitmap[] frames = new Bitmap[walkL.length];
@@ -314,7 +306,7 @@ public class Toolbox {
 				if(TEST_MODE)
 					Log.d(tag, "LM scale bitmap to " + scale + "  " + b.bmp);
 				for(int j = 0; j<b.framesCount; j++) {
-					b.bmp[j] = onLowMemoryBitmap(b.bmp[j], scale,b.sWidth, b.sHeight);
+					b.bmp[j] = onLowMemoryBitmap(b.bmp[j], scale,b.startWidth, b.startHeight);
 				}
 				
 			}

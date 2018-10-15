@@ -19,9 +19,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class GridView extends ViewGroup {
-	private int pixelWidth;
-	private int pihelHeight;
-	
 	private int colCount = 4;
 	private int rowCount = 3;
 	private int padding;
@@ -125,14 +122,6 @@ public class GridView extends ViewGroup {
 		this.rowCount = rowCount;
 	}
 
-	public int getPixelWidth() {
-		return pixelWidth;
-	}
-
-	public int getPihelHeight() {
-		return pihelHeight;
-	}
-	
 	public void setScreenSize(int col, int row) {
 		removeAllViews();
 		colCount = col;

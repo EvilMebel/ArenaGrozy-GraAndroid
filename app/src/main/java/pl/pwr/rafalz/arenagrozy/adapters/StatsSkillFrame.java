@@ -8,11 +8,6 @@ public class StatsSkillFrame {
 	private int current_level;
 	private int max_level;
 	private int[] cost;
-	
-	
-	public StatsSkillFrame() {
-		super();
-	}
 
 	public StatsSkillFrame(int nameID, int helpId, int current_level) {
 		super();

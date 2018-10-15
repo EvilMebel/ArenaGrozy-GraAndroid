@@ -1,5 +1,7 @@
-package pl.pwr.rafalz.arenagrozy.game;
+package pl.pwr.rafalz.arenagrozy.game.ui;
 
+import pl.pwr.rafalz.arenagrozy.game.GameObject;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 
 import android.graphics.Canvas;
@@ -40,7 +42,7 @@ public class LifeBar extends GameObject {
 
     public LifeBar(Sprite anchor) {
         super();
-        HP = this.maxHP = anchor.hpStart;
+        HP = this.maxHP = anchor.getHpStart();
         this.anchor = anchor;
         framePaint = new Paint();
         framePaint.setColor(lifeFrameColor);
@@ -60,7 +62,7 @@ public class LifeBar extends GameObject {
 
         setSize(Toolbox.spriteWidth / 3 * 2);
         setAlpha(currAlpha);
-        yModified = anchor.height * 1f;// defoult value
+        yModified = anchor.getHeight() * 1f;// defoult value
     }
 
     @Override
@@ -88,8 +90,8 @@ public class LifeBar extends GameObject {
     public void draw(Canvas c) {
         if (visible) {
             if (anchor != null) {
-                y = anchor.y - yModified;
-                x = anchor.x;
+                y = anchor.getY() - yModified;
+                x = anchor.getX();
             }
             lifeBarFrame.set(x - width, y - height, x + width, y + height);
             lifeBarHP.set(x - width + padd, y - height + padd,

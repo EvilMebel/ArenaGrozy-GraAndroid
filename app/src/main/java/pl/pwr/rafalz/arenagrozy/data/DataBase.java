@@ -20,7 +20,7 @@ public class DataBase {
 	public static final int HEROES_COUNT = 3;
 	public static final int LEVELS_COUNT = 17;
 	/*
-	 * HEROES DATAevery character have 6 skills - 3 base, 3 special
+	 * HEROES DATA every character have 6 skills - 3 base, 3 special
 	 */
 	// keys for heroes data
 	private static final String hero1 = "H1_";
@@ -274,11 +274,11 @@ public class DataBase {
 	}
 
 	private static void log(String key, int value, char akcja) {
-		// Log.d(tag, "key = "+key + " =>" + value + " akcja:"+akcja);
+		// Log.d(TAG, "key = "+key + " =>" + value + " akcja:"+akcja);
 	}
 
 	private static void log(String key, boolean value, char akcja) {
-		// Log.d(tag, "key = "+key + " =>" + value + "\r\nakcja:"+akcja);
+		// Log.d(TAG, "key = "+key + " =>" + value + "\r\nakcja:"+akcja);
 	}
 
 	/*

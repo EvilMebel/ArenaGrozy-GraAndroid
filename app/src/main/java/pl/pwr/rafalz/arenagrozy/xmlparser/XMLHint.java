@@ -3,11 +3,6 @@ package pl.pwr.rafalz.arenagrozy.xmlparser;
 public class XMLHint extends XMLData {
 	private int hintId;
 
-	
-	public XMLHint() {
-		super();
-	}
-
 	public XMLHint(int hintId) {
 		super();
 		this.hintId = hintId;

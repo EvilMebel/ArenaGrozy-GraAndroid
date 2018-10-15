@@ -1,8 +1,8 @@
 package pl.pwr.rafalz.arenagrozy.data;
 
 import pl.pwr.rafalz.arenagrozy.R;
-import pl.pwr.rafalz.arenagrozy.game.Enemy;
-import pl.pwr.rafalz.arenagrozy.game.Sprite;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Enemy;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
 import pl.pwr.rafalz.arenagrozy.game.Task;
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 import android.graphics.Color;
@@ -14,7 +14,7 @@ import android.graphics.Color;
  */
 public class EnemyDB {
 
-	//starts from 80 becouse lower numbers are used by heroes
+	//starts from 80 because lower numbers are used by heroes
 	//enemy id is also his task id
 	//if enemy is a healer - need a new task id +1000
 	public static final int HEAL_SKILL = 1000;

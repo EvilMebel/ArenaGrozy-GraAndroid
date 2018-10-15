@@ -1,7 +1,6 @@
-package pl.pwr.rafalz.arenagrozy.gameUI;
+package pl.pwr.rafalz.arenagrozy.game.ui;
 
-import pl.pwr.rafalz.arenagrozy.game.LifeBar;
-import pl.pwr.rafalz.arenagrozy.game.RunnableInerface;
+import pl.pwr.rafalz.arenagrozy.game.RunnableInterface;
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 import pl.pwr.rafalz.arenagrozy.view.GameView;
 
@@ -18,7 +17,7 @@ import android.graphics.Rect;
  *
  * @author Zientara
  */
-public class ButtonV implements RunnableInerface {
+public class ButtonV implements RunnableInterface {
     protected Rect r;
     protected Rect src;
     protected Paint paint;

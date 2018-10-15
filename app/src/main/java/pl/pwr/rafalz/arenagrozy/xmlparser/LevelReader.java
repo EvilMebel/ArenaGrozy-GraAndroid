@@ -59,13 +59,11 @@ public class LevelReader {
 		return null;
 	}
 	
-	
-	
 	private static XMLLevelInfo parseXML(XmlPullParser parser) throws XmlPullParserException,IOException
 	{
 		XMLLevelInfo info = new XMLLevelInfo();
-		List<List<XMLData>> data  = null;
-		List<XMLData> section = null;
+		List<List<XMLData>> data  = new ArrayList<List<XMLData>>();
+		List<XMLData> section = new ArrayList<XMLData>();
         int eventType = parser.getEventType();
         XMLEnemy enemy = null;
         XMLText text = null;

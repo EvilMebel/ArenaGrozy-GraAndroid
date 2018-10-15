@@ -1,7 +1,7 @@
-package pl.pwr.rafalz.arenagrozy.gameUI;
+package pl.pwr.rafalz.arenagrozy.game.ui;
 
 import pl.pwr.rafalz.arenagrozy.data.TaskDB;
-import pl.pwr.rafalz.arenagrozy.game.Sprite;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
 import pl.pwr.rafalz.arenagrozy.game.Task;
 
 import android.graphics.Canvas;

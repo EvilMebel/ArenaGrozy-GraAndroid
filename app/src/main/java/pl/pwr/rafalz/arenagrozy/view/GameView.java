@@ -14,19 +14,19 @@ import pl.pwr.rafalz.arenagrozy.data.LevelDB;
 import pl.pwr.rafalz.arenagrozy.data.LevelFrame;
 import pl.pwr.rafalz.arenagrozy.data.TaskDB;
 import pl.pwr.rafalz.arenagrozy.data.TextDB;
-import pl.pwr.rafalz.arenagrozy.game.Enemy;
-import pl.pwr.rafalz.arenagrozy.game.FillScreen;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Enemy;
+import pl.pwr.rafalz.arenagrozy.game.effects.FillScreen;
 import pl.pwr.rafalz.arenagrozy.game.GameLogic;
 import pl.pwr.rafalz.arenagrozy.game.GameObject;
-import pl.pwr.rafalz.arenagrozy.game.Hero;
-import pl.pwr.rafalz.arenagrozy.game.LifeBar;
-import pl.pwr.rafalz.arenagrozy.game.Missle;
-import pl.pwr.rafalz.arenagrozy.game.Pivot;
-import pl.pwr.rafalz.arenagrozy.game.Sprite;
-import pl.pwr.rafalz.arenagrozy.game.Text;
-import pl.pwr.rafalz.arenagrozy.game.Wave;
-import pl.pwr.rafalz.arenagrozy.gameUI.ButtonV;
-import pl.pwr.rafalz.arenagrozy.gameUI.SpellButton;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Hero;
+import pl.pwr.rafalz.arenagrozy.game.ui.LifeBar;
+import pl.pwr.rafalz.arenagrozy.game.effects.Missle;
+import pl.pwr.rafalz.arenagrozy.game.effects.Pointer;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
+import pl.pwr.rafalz.arenagrozy.game.ui.Text;
+import pl.pwr.rafalz.arenagrozy.game.effects.Wave;
+import pl.pwr.rafalz.arenagrozy.game.ui.ButtonV;
+import pl.pwr.rafalz.arenagrozy.game.ui.SpellButton;
 import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 import pl.pwr.rafalz.arenagrozy.xmlparser.XMLData;
 import pl.pwr.rafalz.arenagrozy.xmlparser.XMLEnemy;
@@ -114,10 +114,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private List<GameObject> firstPlan = new ArrayList<GameObject>();
 
-    private List<Pivot> pivots = new ArrayList<Pivot>();
+    private List<Pointer> pointers = new ArrayList<Pointer>();
 
     //handle touch
-    private Pivot touchPivot;
+    private Pointer touchPointer;
 
     private Rect playground;
     private Rect dst;
@@ -170,8 +170,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         if (buttonSize > Toolbox.screenWidth / 8)
             buttonSize = Toolbox.screenWidth / 8;
 
-        touchPivot = new Pivot(0, 0, touchError);
-        touchPivot.setVisible(false);
+        touchPointer = new Pointer(0, 0, touchError);
+        touchPointer.setVisible(false);
 
         setFocusable(true);
         getHolder().addCallback(this);
@@ -181,14 +181,15 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
 
     public void draw(Canvas c) {
+        super.draw(c);
         if (!memoryFree) {
             c.drawBitmap(backroundBmp, null, dst, paint);
 
-            // pivots at the bottom
-            for (Pivot p : pivots)
+            // pointers at the bottom
+            for (Pointer p : pointers)
                 p.draw(c);
 
-            touchPivot.draw(c);
+            touchPointer.draw(c);
 
             for (int i = 0; i < ground.size(); i++)
                 ground.get(i).draw(c);
@@ -321,10 +322,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 firstPlan.remove(i);
         }
 
-        for (Pivot p : pivots)
+        for (Pointer p : pointers)
             p.update(dt);
 
-        touchPivot.update(dt);
+        touchPointer.update(dt);
 
 
         //sorting layers
@@ -411,13 +412,13 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             case MotionEvent.ACTION_DOWN:
                 touchTime = System.currentTimeMillis() + touchTimeTap;
                 if (isOnPlayground(x, y)) {
-                    touchPivot.show();
-                    touchPivot.setColor(hero.getPivot().getColor());
+                    touchPointer.show();
+                    touchPointer.setColor(hero.getPointer().getColor());
 
                     if (the_nearest_sprite != null && the_nearest_sprite.distance(x, y + Toolbox.gettouchCor()) < touchError) {
-                        touchPivot.setPosition(the_nearest_sprite);
+                        touchPointer.setPosition(the_nearest_sprite);
                     } else {
-                        touchPivot.setPosition(x, y);
+                        touchPointer.setPosition(x, y);
                     }
 
                 }
@@ -428,7 +429,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 } else {
                     choose_mover = clickedHero.getWhichHero() - 1;
                     switch_hero.get(choose_mover).forceClick();
-                    touchPivot.setColor(((Sprite) heroes.get(choose_mover)).getPivot().getColor());
+                    touchPointer.setColor(((Sprite) heroes.get(choose_mover)).getPointer().getColor());
                 }
                 if (pauseButton.isClicked(x, y)) {
                     pause();
@@ -465,17 +466,17 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                         hero.setTarget(the_nearest_sprite);
                         setHasTarger(choose_mover, true);
 
-                        touchPivot.hide();
+                        touchPointer.hide();
                     } else {
                         hero.setTarget(null); //canceling current task
-                        hero.getPivot().move(x, y);
-                        hero.getPivot().show();
+                        hero.getPointer().move(x, y);
+                        hero.getPointer().show();
                         hero.changeDestination(x, y, 0, false);
                         setHasTarger(choose_mover, false);
-                        touchPivot.hide();
+                        touchPointer.hide();
                     }
                 } else {
-                    touchPivot.hide();
+                    touchPointer.hide();
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -485,15 +486,15 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     //near target
                     if (the_nearest_sprite != null && the_nearest_sprite.distance(x, y + Toolbox.gettouchCor()) < touchError)//
                     {
-                        touchPivot.move((int) the_nearest_sprite.getX(), (int) the_nearest_sprite.getY());
-                        touchPivot.setVisible(true);
+                        touchPointer.move((int) the_nearest_sprite.getX(), (int) the_nearest_sprite.getY());
+                        touchPointer.setVisible(true);
                     } else {
                         //on ground
-                        touchPivot.move(x, y);
-                        touchPivot.setVisible(true);
+                        touchPointer.move(x, y);
+                        touchPointer.setVisible(true);
                     }
                 } else {
-                    touchPivot.setVisible(false);
+                    touchPointer.setVisible(false);
                 }
 
                 break;
@@ -510,7 +511,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         Wave w = new Wave(h.getWidth() / 2);
         w.setPosition(h);
         w.setAlphaDelta(60);
-        w.setColor(h.getPivot().getColor());
+        w.setColor(h.getPointer().getColor());
         addWave(w);
     }
 
@@ -878,7 +879,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
 
     private void addHero(Hero h) {
-        pivots.add(h.getPivot());
+        pointers.add(h.getPointer());
         sprites.add(h);
         heroes.add(h);
     }
@@ -1129,7 +1130,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
         pauseButton.fadeOutAnimation();
 
-        touchPivot.hide();
+        touchPointer.hide();
 
         List<SpellButton> spel = spells.get(choose_mover);
         for (SpellButton b : spel)
@@ -1187,5 +1188,5 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     public void postFPS(float avFps) {
         fps = avFps;
     }
-    
+
 }

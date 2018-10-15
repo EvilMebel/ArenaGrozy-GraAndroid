@@ -6,12 +6,6 @@ public class XMLText extends XMLData{
 	private int textId;
 	//private String text;//TODO id
 	private int color = Color.BLACK;//default color for text is black
-	
-	
-	public XMLText() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	public XMLText(int textId, int color) {
 		super();

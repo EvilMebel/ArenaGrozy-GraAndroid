@@ -1,12 +1,13 @@
-package pl.pwr.rafalz.arenagrozy.game;
-
-import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
+package pl.pwr.rafalz.arenagrozy.game.ui;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Typeface;
+
+import pl.pwr.rafalz.arenagrozy.game.GameObject;
+import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 
 /**
  * Visualization for dmg, and texts on screen. By default have setted fade out
@@ -85,9 +86,10 @@ public class Text extends GameObject {
     @Override
     public void setPosition(GameObject go) {
         super.setPosition(go);
-        if (go != null)
+        if (go != null) {
             y -= go.getHeight() * Toolbox.getRandom(.4f, .7f);
-        x -= go.getWidth() * Toolbox.getRandom(-.3f, .3f);
+            x -= go.getWidth() * Toolbox.getRandom(-.3f, .3f);
+        }
     }
 
     public void setColor(int green) {

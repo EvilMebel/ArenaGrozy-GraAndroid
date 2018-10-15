@@ -10,16 +10,13 @@ import android.graphics.Bitmap;
 public class BitmapFrames {
 	public int bmpId;
 	public int framesCount;
-	public int sWidth;
-	public int sHeight;
+	public int startWidth;
+	public int startHeight;
 	public Bitmap[] bmp;
 	public int ownersCount;//how many sprites uses this animation?
 	public float scaleLowMemory;//1-at start, describes scale after onLowMemory
 	public boolean mirrored;
-	
-	public BitmapFrames() {
-	}
-	
+
 	public BitmapFrames(int resId, int framesCount, Bitmap[] bmp, boolean mirrored) {
 		super();
 		this.bmpId = resId;
@@ -27,8 +24,8 @@ public class BitmapFrames {
 		this.bmp = bmp;
 		this.mirrored = mirrored;
 		scaleLowMemory = 1f;
-		sWidth = bmp[0].getWidth();
-		sHeight = bmp[0].getHeight();
+		startWidth = bmp[0].getWidth();
+		startHeight = bmp[0].getHeight();
 	}
 
 	public void addOwner() {
