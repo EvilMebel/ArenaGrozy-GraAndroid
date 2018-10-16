@@ -1,13 +1,14 @@
 package pl.pwr.rafalz.arenagrozy.game.ui;
 
-import pl.pwr.rafalz.arenagrozy.game.GameObject;
-import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
-import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
-
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+
+import pl.pwr.rafalz.arenagrozy.game.GameObject;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Sprite;
+import pl.pwr.rafalz.arenagrozy.game.sprites.Stats;
+import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
 
 /**
  * Life bar. Can be attached to GameObject.
@@ -27,12 +28,11 @@ public class LifeBar extends GameObject {
     private static final int lifeFrameColor = Color.BLACK;
     private static final int barColorBg = Color.parseColor("#BE2625");// red
     private static final int barColor = Color.parseColor("#66CD00");// green
+    private final Stats stats;
     private RectF lifeBarHP;
     private Paint framePaint;
     private Paint barPaint;
     private Paint barBgPaint;
-    private float maxHP;
-    private float HP;
     private Sprite anchor;
     private float yModified;
     private float padd;// frame padding
@@ -40,10 +40,10 @@ public class LifeBar extends GameObject {
 
     private boolean visible = true;
 
-    public LifeBar(Sprite anchor) {
+    public LifeBar(Sprite anchor, Stats stats) {
         super();
-        HP = this.maxHP = anchor.getHpStart();
         this.anchor = anchor;
+        this.stats = stats;
         framePaint = new Paint();
         framePaint.setColor(lifeFrameColor);
 
@@ -69,7 +69,7 @@ public class LifeBar extends GameObject {
     public void update(float dt) {
         if (currHideDelay < hideDelay) {
             currHideDelay += dt;
-        } else if (deltaAlpha == 0 && currHideDelay >= hideDelay && HP == maxHP)
+        } else if (deltaAlpha == 0 && currHideDelay >= hideDelay && stats.isFullHp())
             deltaAlpha = hideAlphaSpeed;
 
         if (deltaAlpha != 0) {
@@ -100,7 +100,7 @@ public class LifeBar extends GameObject {
             c.drawRect(lifeBarFrame, framePaint);
             c.drawRect(lifeBarHP, barBgPaint);
 
-            if (HP > 0) {
+            if (stats.getHp() > 0) {
                 lifeBarHP.set(x - width + padd, y - height + padd, x - width
                         + padd + barWidth, y + height - padd);
                 c.drawRect(lifeBarHP, barPaint);
@@ -125,48 +125,15 @@ public class LifeBar extends GameObject {
         deltaAlpha = -hideAlphaSpeed;
     }
 
-    private void refresh() {
-        float prop = HP / maxHP;
+    public void refresh() {
+        float prop = stats.getHpProc();
         float fullWidth = (width - padd) * 2;
         barWidth = prop * fullWidth;
     }
 
-    public void damage(float dmg) {
-        HP -= dmg;
-        if (HP < 0)
-            HP = 0;
-
-        refresh();
-    }
-
-    public float getMaxHP() {
-        return maxHP;
-    }
-
-    /**
-     * refresh life bar
-     *
-     * @param maxHP
-     */
-    public void setMaxHP(float maxHP) {
-        HP = this.maxHP = maxHP;
-        refresh();
-    }
-
-    public float getHP() {
-        return HP;
-    }
-
     public void setHP(float hP) {
-        if (this.HP != hP) {
-            //show life bar if is invisible
-            deltaAlpha = -hideAlphaSpeed;
-            currHideDelay = 0;
-        }
-
-        HP = hP;
-        if (HP < 0)
-            HP = 0;
+        deltaAlpha = -hideAlphaSpeed;
+        currHideDelay = 0;
         refresh();
     }
 

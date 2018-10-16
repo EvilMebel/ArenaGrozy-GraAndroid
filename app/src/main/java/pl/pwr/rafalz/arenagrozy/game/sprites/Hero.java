@@ -15,8 +15,8 @@ public class Hero extends Sprite {
     private LifeBar buttonLifeBar;
 
     public Hero(float x, float y, int IDwalk, int walkFrames, int IDstay,
-                int stayFrames, float scale, int whichHero) {
-        super(IDwalk, walkFrames, IDstay, stayFrames, scale);
+                int stayFrames, float scale, int whichHero, Stats stats) {
+        super(IDwalk, walkFrames, IDstay, stayFrames, scale, stats);
         this.x = x;
         this.y = y;
         this.whichHero = whichHero;
@@ -67,7 +67,7 @@ public class Hero extends Sprite {
      * use only for ending when all enemies are defeated!
      */
     public void showLifeBar() {
-        setHp(hp + 0.0001f);// small update for showing lifebar
+        setHp(stats.getHp() + 0.0001f);// small update for showing lifebar
 
     }
 

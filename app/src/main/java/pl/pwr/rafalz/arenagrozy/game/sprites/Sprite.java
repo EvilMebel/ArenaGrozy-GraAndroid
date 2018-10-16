@@ -1,16 +1,5 @@
 package pl.pwr.rafalz.arenagrozy.game.sprites;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import pl.pwr.rafalz.arenagrozy.data.TaskDB;
-import pl.pwr.rafalz.arenagrozy.game.GameMovObj;
-import pl.pwr.rafalz.arenagrozy.game.ui.LifeBar;
-import pl.pwr.rafalz.arenagrozy.game.effects.Pointer;
-import pl.pwr.rafalz.arenagrozy.game.Task;
-import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
-import pl.pwr.rafalz.arenagrozy.view.GameView;
-
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -23,12 +12,24 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import pl.pwr.rafalz.arenagrozy.data.TaskDB;
+import pl.pwr.rafalz.arenagrozy.game.GameMovObj;
+import pl.pwr.rafalz.arenagrozy.game.Task;
+import pl.pwr.rafalz.arenagrozy.game.effects.Pointer;
+import pl.pwr.rafalz.arenagrozy.game.ui.LifeBar;
+import pl.pwr.rafalz.arenagrozy.tools.Toolbox;
+import pl.pwr.rafalz.arenagrozy.view.GameView;
+
 /**
  * Class for all characters on screen.
  *
  * @author Evil
  */
 public abstract class Sprite extends GameMovObj {
+    final Stats stats;
     private final String tag = getClass().getName();
     static final boolean DEBUG_MODE = false;
 
@@ -39,7 +40,7 @@ public abstract class Sprite extends GameMovObj {
     private final static int STATUS_STAY = 1;
     private final static int STATUS_DEAD = 2;
     private final static int STATUS_TASK = 3;//update hit action
-    private final static int STATUS_STUN = 4;
+    final static int STATUS_STUN = 4;
 
     private static final float CORR_HEI = 0.90f;
 
@@ -88,15 +89,6 @@ public abstract class Sprite extends GameMovObj {
 
     protected boolean healer;
 
-    // stats
-    float hpStart = 1000;
-    float strStart = 2;
-    float defStart = 3;
-
-    float hp = 1000;
-    float str = 2;
-    float def = 3;
-
 
     //REFRESHING SETTING
     private final static float refreshDir = .15f;
@@ -120,11 +112,12 @@ public abstract class Sprite extends GameMovObj {
     private Rect dstBmp;
 
     public Sprite(int idWalk, int walkFrames, int idStay, int stayFrames,
-                  float scale) {
+                  float scale, Stats stats) {
         super();
         this.scale = scale;
         bmpIdWalk = idWalk;
         bmpIdStay = idStay;
+        this.stats = stats;
         paint = new Paint();
         shadowPaint = new Paint();
         shadowPaint.setColor(Color.BLACK);
@@ -157,7 +150,7 @@ public abstract class Sprite extends GameMovObj {
         //list of to do Tasks
         tasks = new ArrayList<Task>();
         //attach lifebar
-        lifeBar = new LifeBar(this);
+        lifeBar = new LifeBar(this, stats);
     }
 
     @Override
@@ -403,10 +396,10 @@ public abstract class Sprite extends GameMovObj {
             Sprite s = hitter.getParent();
             //hitter stats
             float power = hitter.getPower();
-            float strMod = 1 + s.str / 100f;
+            float strMod = 1 + s.stats.getStr() / 100f;
 
             //my stats
-            float defMod = (1 - this.def / 100);
+            float defMod = (1 - this.stats.getDef() / 100);
             float dmg = power * strMod * defMod;
 
             Log.d(tag, "HIT! power:" + power + " strMod:" + strMod + " defMod:" + defMod + " finMod:" + strMod * defMod + " taskId:" + hitter.getTaskId());
@@ -426,8 +419,8 @@ public abstract class Sprite extends GameMovObj {
             if (dmg < 0)
                 dmg = 0;
 
-            setHp(hp - dmg);
-            if (hp < 1) {
+            setHp(stats.getHp() - dmg);
+            if (stats.getHp() < 1) {
                 setHp(0);
                 if (pointer != null) {
                     pointer.hide();
@@ -436,8 +429,8 @@ public abstract class Sprite extends GameMovObj {
                 GameView.game.get().spriteIsDead(this);
             }
 
-            if (hp > hpStart)
-                setHp(hpStart);
+            if (stats.getHp() > stats.getHpStart())
+                setHp(stats.getHpStart());
 
             stun(stunT);
 
@@ -450,7 +443,7 @@ public abstract class Sprite extends GameMovObj {
      * cancels current task and changes status to STUN - shock
      */
     protected void stun(float stunTime) {
-        if (hp > 0 && stunTime > 0) {
+        if (stats.getHp() > 0 && stunTime > 0) {
             Log.d(tag, "START of stun");
             cancelCurrentTask();
             this.stunTime = stunTime;
@@ -464,7 +457,7 @@ public abstract class Sprite extends GameMovObj {
     public float heal(Task healer) {
         Sprite s = healer.getParent();
         //get stats of healer - not me
-        float heal = healer.getPower() * (1 + s.str / 100);
+        float heal = healer.getPower() * (1 + s.stats.getStr() / 100);
 
         float rand = Toolbox.getRandom(0, 100);
         if (rand > 90) {
@@ -484,10 +477,10 @@ public abstract class Sprite extends GameMovObj {
         if (heal < 1)
             heal = 0;
 
-        setHp(hp + heal);
+        setHp(stats.getHp() + heal);
 
-        if (hp > hpStart)
-            setHp(hpStart);
+        if (stats.getHp() > stats.getHpStart())
+            setHp(stats.getHpStart());
 
         return heal;
     }
@@ -614,7 +607,7 @@ public abstract class Sprite extends GameMovObj {
     }
 
     public boolean isDead() {
-        return hp <= 0;
+        return stats.getHp() <= 0;
     }
 
     @Override
@@ -624,13 +617,6 @@ public abstract class Sprite extends GameMovObj {
 
     public boolean canMove() {
         return status != STATUS_DEAD && status != STATUS_TASK && status != STATUS_STUN;
-    }
-
-    /**
-     * get hp in procent
-     */
-    public float getHpProc() {
-        return hp / hpStart;
     }
 
     public float getScale() {
@@ -804,19 +790,6 @@ public abstract class Sprite extends GameMovObj {
         standardSpeed *= proc;
     }
 
-    public void setHpStart(float hpStart) {
-        hp = this.hpStart = hpStart;
-        lifeBar.setMaxHP(hp);
-    }
-
-    public void setDefStart(float defStart) {
-        def = this.defStart = defStart;
-    }
-
-    public void setStrStart(float strStart) {
-        str = this.strStart = strStart;
-    }
-
     /**
      * IMPORTANT! REMOVE ALL REFERENCES FOR DELETED OBJECT!
      */
@@ -873,7 +846,7 @@ public abstract class Sprite extends GameMovObj {
      * @return
      */
     public String statsInfo() {
-        return "hp = " + hpStart + " \tstr = " + str + " \tdef = " + def;
+        return "hp = " + stats.getHpStart() + " \tstr = " + stats.getStr() + " \tdef = " + stats.getDef();
 
     }
 
@@ -913,11 +886,15 @@ public abstract class Sprite extends GameMovObj {
     }
 
     public void setHp(float hp) {
-        this.hp = hp;
+        this.stats.setHp(hp);
         lifeBar.setHP(hp);
     }
 
     public float getHpStart() {
-        return hpStart;
+        return stats.getHpStart();
+    }
+
+    public Stats getStats() {
+        return stats;
     }
 }

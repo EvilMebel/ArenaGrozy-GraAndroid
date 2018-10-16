@@ -744,12 +744,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         //setlifebars
         for (int i = 0; i < DataBase.HEROES_COUNT; i++) {
             Hero h = (Hero) heroes.get(i);
-            LifeBar l = new LifeBar(h);
-            l.setAnchor(null);
-            l.setSize((int) (buttonSize * 0.9f));
+            LifeBar lifeBar = new LifeBar(h, h.getStats());
+            lifeBar.setAnchor(null);
+            lifeBar.setSize((int) (buttonSize * 0.9f));
             ButtonV b = switch_hero.get(i);
-            b.setLifebar(l);
-            h.setButtonLifeBar(l);//references for updating!
+            b.setLifebar(lifeBar);
+            h.setButtonLifeBar(lifeBar);//references for updating!
         }
 
         switch_hero.get(0).focus();

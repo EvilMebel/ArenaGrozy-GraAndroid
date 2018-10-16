@@ -49,8 +49,8 @@ public class Enemy extends Sprite {
     //will keep information about target durning stun
     private Sprite favTarget;
 
-    public Enemy(float x, float y, int IDwalk, int walkFrames, int IDstay, int stayFrames, float scale) {
-        super(IDwalk, walkFrames, IDstay, stayFrames, scale);
+    public Enemy(float x, float y, int IDwalk, int walkFrames, int IDstay, int stayFrames, float scale, Stats stats) {
+        super(IDwalk, walkFrames, IDstay, stayFrames, scale, stats);
         this.x = x;
         this.y = y;
 
@@ -85,7 +85,7 @@ public class Enemy extends Sprite {
         if (target == null && !evilWon) {
 
             List<GameObject> sprites = null;
-            boolean lowHp = getHpProc() < HEAL_PROC_LOW;
+            boolean lowHp = stats.getHpProc() < HEAL_PROC_LOW;
             Log.d(tag, "attack! AI TYPE = " + aiType);
             switch (aiType) {
 
@@ -127,7 +127,7 @@ public class Enemy extends Sprite {
 
                     sprites = GameView.game.get().getEnemies();
                     target = getStrongSprite(sprites);
-                    if (target == null || target == this || lowHp || (target != null && target.getHpProc() >= HEAL_PROC_MAX)) {
+                    if (target == null || target == this || lowHp || (target != null && target.stats.getHpProc() >= HEAL_PROC_MAX)) {
                         if (lowHp) {
                             target = this; // heal myself
                         } else {
@@ -162,9 +162,6 @@ public class Enemy extends Sprite {
 
     /**
      * get sprite with min hp
-     *
-     * @param list
-     * @return
      */
     private Sprite getWeakSprite(List<GameObject> list) {
         if (list.size() > 0) {
@@ -172,8 +169,8 @@ public class Enemy extends Sprite {
             int index = -1;
             for (int i = 0; i < list.size(); i++) {
                 Sprite s = (Sprite) list.get(i);
-                if (!s.isDead() && s.hp < min) {
-                    min = s.hp;
+                if (!s.isDead() && s.stats.getHp() < min) {
+                    min = s.stats.getHp();
                     index = i;
                 }
             }
@@ -196,8 +193,8 @@ public class Enemy extends Sprite {
             int index = -1;
             for (int i = 0; i < sprites.size(); i++) {
                 Sprite s = (Sprite) sprites.get(i);
-                if (!s.isDead() && s.hp > max) {
-                    max = s.hp;
+                if (!s.isDead() && s.stats.getHp() > max) {
+                    max = s.stats.getHp();
                     index = i;
                 }
             }
@@ -213,7 +210,7 @@ public class Enemy extends Sprite {
         float dmg = super.hit(hitter, stunT);
         hateSprite(hitter.getParent(), dmg);
 
-        if (hp > 0 && status != STATUS_STUN) {
+        if (stats.getHp() > 0 && status != STATUS_STUN) {
             setTarget(null);
             useBrain();//refresh hated enemy
         }
@@ -226,7 +223,7 @@ public class Enemy extends Sprite {
         float heal = super.heal(healer);
         Sprite h = healer.getParent();
 
-        if (h.target != null && getHpProc() >= HEAL_PROC_MAX) {
+        if (h.target != null && stats.getHpProc() >= HEAL_PROC_MAX) {
             h.target = null;
             if (h instanceof Enemy) {
                 Enemy mHealer = (Enemy) h;
@@ -282,9 +279,6 @@ public class Enemy extends Sprite {
 
     /**
      * search Sprite in hate list
-     *
-     * @param s
-     * @return
      */
     private HateFrame searchSpriteHate(Sprite s) {
         for (HateFrame a : blackList)
