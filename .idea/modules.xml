@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArenaGrozy-GraAndroid.iml" filepath="$PROJECT_DIR$/ArenaGrozy-GraAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArenaGrozy.iml" filepath="$PROJECT_DIR$/ArenaGrozy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

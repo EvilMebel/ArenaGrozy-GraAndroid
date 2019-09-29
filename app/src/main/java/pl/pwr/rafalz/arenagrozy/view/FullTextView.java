@@ -1,16 +1,17 @@
 package pl.pwr.rafalz.arenagrozy.view;
 
 import android.content.Context;
-import android.support.v7.internal.widget.CompatTextView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 /**
  * Modified TextView which uses a half of height for text size
  *
  * @author Zientara
  */
-public class FullTextView extends CompatTextView {
+public class FullTextView extends AppCompatTextView {
 
     public FullTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
